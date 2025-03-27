@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scheduler-config>
+    <databases>
+        <database>
+            <name>TestesPedro</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>erp_testes_pedro</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+        <database>
+            <name>ErpEPraCasa_280225</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>erp_epracasa_280225</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+        <database>
+            <name>ErpTestesNathy</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>erp_testes_nathy</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+        <database>
+            <name>ErpTestesNathy2</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>erp_testes_nathy_2</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+        <database>
+            <name>ErTestesNathy3</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>erp_testes_nathy_3</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+        <database>
+            <name>AlbatrosPadraoTestes4</name>
+            <host>192.168.0.14</host>
+            <port>3306</port>
+            <databaseName>albatros_padrao_testes_4</databaseName>
+            <user>root</user>
+            <password/>
+        </database>
+    </databases>
+    <schedule>
+        <cron-expression>0/5 * * * * ?</cron-expression>
+    </schedule>
+    <queries>
+        <query>
+            <database-ref>TestesPedro</database-ref>
+            <sql>SELECT * FROM bancos</sql>
+            <csv>
+                <output-path>/bancos/erp_testes_pedro/consultas</output-path>
+                <file-name>bancos.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+        <query>
+            <database-ref>ErpEPraCasa_280225</database-ref>
+            <sql>SELECT * FROM cidades</sql>
+            <csv>
+                <output-path>/bancos/erp_epracasa_280225</output-path>
+                <file-name>cidades.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+        <query>
+            <database-ref>ErpTestesNathy</database-ref>
+            <sql>SELECT * FROM produtos_tabelas</sql>
+            <csv>
+                <output-path>/bancos/erp_testes_nathy/consultas</output-path>
+                <file-name>produtos_tabelas.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+        <query>
+            <database-ref>ErpTestesNathy2</database-ref>
+            <sql>SELECT * FROM produtos</sql>
+            <csv>
+                <output-path>/bancos/erp_testes_nathy2</output-path>
+                <file-name>produtos.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+        <query>
+            <database-ref>ErTestesNathy3</database-ref>
+            <sql>SELECT * FROM cadastros</sql>
+            <csv>
+                <output-path>/bancos/erp_testes_nathy3/consultas</output-path>
+                <file-name>cadastros.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+        <query>
+            <database-ref>AlbatrosPadraoTestes4</database-ref>
+            <sql>SELECT * FROM banco_dados_tabelas</sql>
+            <csv>
+                <output-path>/bancos/albatros_padrao_testes_4/consultas/</output-path>
+                <file-name>banco_dados_tabelas.csv</file-name>
+                <delimiter>,</delimiter>
+            </csv>
+        </query>
+    </queries>
+</scheduler-config>
