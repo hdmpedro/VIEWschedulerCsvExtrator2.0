@@ -25,7 +25,7 @@ public class XmlLoaderController {
 
         System.out.println("Databases configurados:");
         config.getDatabases().forEach(db ->
-                System.out.printf("DB: %s | Host: %s | Database: %s%n",
+                System.err.printf("DB: %s | Host: %s | Banco: %s%n",
                         db.getName(), db.getHost(), db.getDatabaseName()));
 
         return config;
