@@ -45,7 +45,7 @@ public class DatabasePanel extends JPanel {
         DatabaseDialog dialog = new DatabaseDialog((Frame) SwingUtilities.getWindowAncestor(this));
         if(dialog.showDialog()) {
             controller.addDatabase(dialog.getDatabase());
-            model.fireTableDataChanged(); // Atualiza a tabela
+            model.fireTableDataChanged();
         }
     }
 
